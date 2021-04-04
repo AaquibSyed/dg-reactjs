@@ -1,6 +1,23 @@
 .header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-end;
   min-height: 192px;
+  justify-content: space-between;
+  margin: 0.1rem 0.2rem;
+}
+
+.search__input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+  color: rgb(255, 255, 255, 0.8);
+  height: 100%;
+}
+.header__back {
+  margin-right: 0.2rem;
+}
+.header__search {
+  flex: 2;
+  margin-bottom: 0.4rem;
 }
