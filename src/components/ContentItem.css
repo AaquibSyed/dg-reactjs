@@ -1,0 +1,16 @@
+.contentItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.poster__image {
+  height: 25vh;
+  width: 25vw;
+  object-fit: contain;
+}
+
+.title__text {
+  font-size: smaller;
+}
