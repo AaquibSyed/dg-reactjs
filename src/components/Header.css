@@ -1,9 +1,16 @@
 .header {
   display: flex;
   align-items: flex-end;
-  min-height: 192px;
   justify-content: space-between;
-  margin: 0.1rem 0.2rem;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  position: -webkit-sticky;
+  height: auto;
+  z-index: 100;
+  -webkit-box-shadow: 0 4rem 4rem 0.9rem rgba(255, 251, 251, 0.19);
+  -moz-box-shadow: 0 4rem 4rem 0.9rem rgba(255, 251, 251, 0.19);
+  box-shadow: 0 3rem 4rem 0.9rem rgb(0, 0, 0);
 }
 
 .search__input {
@@ -15,7 +22,7 @@
   height: 100%;
 }
 .header__back {
-  margin-right: 0.2rem;
+  margin-right: 0.4rem;
 }
 .header__search {
   flex: 2;
