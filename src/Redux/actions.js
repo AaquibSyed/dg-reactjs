@@ -1,11 +1,10 @@
-import { INSERT_DATA, UPDATE_DATA, FILTER_DATA } from "./types";
+import { INSERT_DATA, UPDATE_DATA, FILTER_DATA, ADD_PAGE } from "./types";
 
-export const insertData = (e) => {
+export const insertData = (data) => {
+  console.log(data);
   return {
     type: INSERT_DATA,
-    payload: {
-      title: null,
-    },
+    data: data,
   };
 };
 
@@ -24,5 +23,11 @@ export const filterData = () => {
     payload: {
       title: null,
     },
+  };
+};
+
+export const addPage = () => {
+  return {
+    type: ADD_PAGE,
   };
 };

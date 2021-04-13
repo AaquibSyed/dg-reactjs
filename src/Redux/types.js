@@ -1,5 +1,4 @@
-const INSERT_DATA = "INSERT_DATA";
-const UPDATE_DATA = "UPDATE_DATA";
-const FILTER_DATA = "FILTER_DATA";
-
-exports.module = { INSERT_DATA, UPDATE_DATA, FILTER_DATA };
+export const INSERT_DATA = "INSERT_DATA";
+export const UPDATE_DATA = "UPDATE_DATA";
+export const FILTER_DATA = "FILTER_DATA";
+export const ADD_PAGE = "ADD_PAGE";

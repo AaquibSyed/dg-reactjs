@@ -1,17 +1,34 @@
-import { INSERT_DATA, UPDATE_DATA, FILTER_DATA } from "./types";
-const initialState = [];
+import { INSERT_DATA, UPDATE_DATA, FILTER_DATA, ADD_PAGE } from "./types";
+const initialState = {
+  data: [],
+  page: "PAGE1",
+};
 
-export const contentReducer = (state = initialState, action) => {
+const contentReducer = (state = initialState, action) => {
   switch (action.type) {
+    case ADD_PAGE:
+      let newpage = state.page === "PAGE1" ? "PAGE2" : "PAGE3";
+      return {
+        ...state,
+        page: newpage,
+      };
     case INSERT_DATA:
-      return state;
+      return {
+        ...state,
+        data: state.data.concat(action.data),
+      };
 
     case UPDATE_DATA:
-      return state;
+      return {
+        ...state,
+        page: "PAGE2",
+      };
 
     case FILTER_DATA:
       return state;
     default:
-      break;
+      return state;
   }
 };
+
+export default contentReducer;
