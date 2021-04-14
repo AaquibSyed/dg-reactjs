@@ -1,6 +1,7 @@
 import { INSERT_DATA, UPDATE_DATA, FILTER_DATA, ADD_PAGE } from "./types";
 const initialState = {
   data: [],
+  filteredData: [],
   page: "PAGE1",
 };
 
@@ -16,6 +17,7 @@ const contentReducer = (state = initialState, action) => {
       return {
         ...state,
         data: state.data.concat(action.data),
+        filteredData: state.data.concat(action.data),
       };
 
     case UPDATE_DATA:
@@ -25,7 +27,10 @@ const contentReducer = (state = initialState, action) => {
       };
 
     case FILTER_DATA:
-      return state;
+      return {
+        ...state,
+        filteredData: action.payload.data,
+      };
     default:
       return state;
   }

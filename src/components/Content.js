@@ -6,7 +6,7 @@ import "./Content.css";
 import { insertData } from "../Redux/actions";
 import { connect } from "react-redux";
 
-function Content({ data, page, insertLoadedData }) {
+function Content({ filteredData, page, insertLoadedData }) {
   useEffect(() => {
     axios
       .get(`./data/CONTENTLISTINGPAGE-${page}.json`)
@@ -18,7 +18,7 @@ function Content({ data, page, insertLoadedData }) {
 
   return (
     <div className="content">
-      {data.map((item, idx) => (
+      {filteredData.map((item, idx) => (
         <ContentItem
           id={idx}
           title={item.name}
@@ -31,7 +31,7 @@ function Content({ data, page, insertLoadedData }) {
 }
 const mapStateToProps = (state) => {
   return {
-    data: state.data,
+    filteredData: state.filteredData,
     page: state.page,
   };
 };

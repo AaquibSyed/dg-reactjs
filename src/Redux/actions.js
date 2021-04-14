@@ -17,11 +17,14 @@ export const updateData = (enteredChar) => {
   };
 };
 
-export const filterData = () => {
+export const filterData = (data, value) => {
+  console.log(value);
   return {
     type: FILTER_DATA,
     payload: {
-      title: null,
+      data: data.filter(
+        (x) => x.name.toLowerCase().indexOf(value.toLowerCase()) >= 0
+      ),
     },
   };
 };
