@@ -6,7 +6,6 @@ import { addPage } from "../Redux/actions";
 function ContentItem({ addPage, data, title, poster, id }) {
   const observer = useRef();
   const picError = (e) => {
-    console.log("source absent", e.target);
     e.target.src = "./posters/posterthatismissing.png";
   };
   const lastItem = useCallback((node) => {
